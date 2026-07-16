@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POST Demo</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f2f2f2;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            width: 200px;
+        }
+
+        button {
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Send Data</h2>
+
+    <input type="text" id="name" placeholder="Enter name" />
+    <br>
+    <button onclick="sendData()">Submit</button>
+</div>
+
+<script>
+    function sendData(){
+        const name = document.getElementById('name').value;
+
+        fetch('http://localhost:7000/named', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name })
+        })
+        .then(res => res.text())
+        .then(data => alert(data)); 
+    }
+</script>
+
+</body>
+</html>

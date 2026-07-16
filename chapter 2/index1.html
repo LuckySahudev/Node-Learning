@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      width: 90%;
+      max-width: 900px;
+      border-radius: 12px;
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .images {
+      flex: 1;
+    }
+
+    .images img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .thumbs {
+      display: flex;
+      margin-top: 10px;
+      gap: 10px;
+    }
+
+    .thumbs img {
+      width: 60px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: 2px solid transparent;
+    }
+
+    .thumbs img:hover {
+      border: 2px solid #333;
+    }
+
+    .details {
+      flex: 1;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .price {
+      color: green;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+
+    .desc {
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      background: black;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #333;
+    }
+
+    .cart-msg {
+      margin-top: 10px;
+      color: blue;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px){
+      .container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- IMAGE SECTION -->
+  <div class="images">
+    <img id="mainImg" src="**src**">
+
+    <div class="thumbs">
+      <img src="**src**">
+    </div>
+  </div>
+
+  <!-- DETAILS -->
+  <div class="details">
+    <div class="title">**title**</div>
+    <div class="price">**price**</div>
+
+    <div class="desc">
+      Experience the power of Apple A16 Bionic chip, stunning Super Retina XDR display,
+      and a pro-grade camera system with Dynamic Island.
+    </div>
+
+    <button class="btn" onclick="addToCart()">Add to Cart</button>
+
+    <div class="cart-msg" id="msg"></div>
+  </div>
+
+</div>
+
+<script>
+  function changeImg(src){
+    document.getElementById('mainImg').src = src;
+  }
+
+  function addToCart(){
+    const msg = document.getElementById('msg');
+    msg.innerText = "✅ Added to cart!";
+    
+    setTimeout(()=>{
+      msg.innerText = "";
+    },2000);
+  }
+</script>
+
+</body>
+</html>
