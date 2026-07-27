@@ -168,4 +168,3 @@
             res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
             --> use to allow the Access of Content-Type while POST reqest is written on head.
 
-        

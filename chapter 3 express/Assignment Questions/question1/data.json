@@ -1,0 +1,36 @@
+[
+    {
+        "rollno" : 111,
+        "name" : "Lucky Sahu",
+        "branch" : "CST",
+        "age" : 20,
+        "year" : "2nd"
+    },
+    {
+        "rollno" : 112,
+        "name" : "Manas Das",
+        "branch" : "IT",
+        "age" : 20,
+        "year" : "2nd"
+    },
+    {
+        "rollno" : 113,
+        "name" : "Kunal Prashad",
+        "branch" : "IT",
+        "age" : 20,
+        "year" : "2nd"
+    },
+    {
+        "rollno" : 114,
+        "name" : "Jay Prakash Nag",
+        "branch" : "CST",
+        "age" : 20,
+        "year" : "2nd"
+    },
+    {
+        "name" : "Khushboo",
+        "branch" : "CST",
+        "age" : 20,
+        "year" : "2nd"
+    }
+]
